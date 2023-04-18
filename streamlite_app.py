@@ -51,6 +51,7 @@ try:
     fruitvice_response= requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
     fruitvice_normalized =  pandas.json_normalize(fruitvice_response.json())
     streamlit.dataframe(fruitvice_normalized)
+    
 error URLError as e:
   streamlit.error()
   
@@ -68,9 +69,9 @@ error URLError as e:
 
 
 # new line with table format
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+# fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # Table with details
-streamlit.dataframe(fruityvice_normalized)
+# streamlit.dataframe(fruityvice_normalized)
 
 
 #don't run anything past here while we troubleshoot 
